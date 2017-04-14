@@ -2,8 +2,8 @@ pipeline {
 // Testing
   agent none
   stages {
-    node('terraform') {
-      stage('Build') {
+    stage('Build') {
+      node('terraform') {
         steps {
           container('terraform') {
             checkout scm
