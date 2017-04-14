@@ -18,6 +18,10 @@ podTemplate(
     container('build-env') {
       stage('Checkout code') {
         checkout scm
+      }
+    }
+    container('build-env') {
+      stage('Run Some Command') {
         sh 'aws s3 ls'
       }
     }
