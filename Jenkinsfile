@@ -16,6 +16,10 @@ podTemplate(
 )
 {
   node ('myaccount') {
+    stage('Checkout code') {
+      checkout scm
+    }
+
     stage('Get myAccount code') {
       container('awscli') {
         stage('Test AWS CLI') {
