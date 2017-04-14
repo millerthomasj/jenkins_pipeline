@@ -1,4 +1,6 @@
-node('terraform') {
+node('python3.6') {
   checkout scm
-  sh './build.sh'
+  container('python3.6') {
+    sh './build.sh'
+  }
 }
