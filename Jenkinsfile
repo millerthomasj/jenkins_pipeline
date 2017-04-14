@@ -1,11 +1,11 @@
 pipeline {
 // Testing
   agent none
-      node('terraform') {
+
   stages {
     stage('Build') {
-
-        steps {
+      steps {
+        node('terraform') {
           container('terraform') {
             checkout scm
             sh("hostname")
