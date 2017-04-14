@@ -15,10 +15,12 @@ podTemplate(
 )
 {
   node ('myaccount') {
-    stage 'Get myAccount code'
-    container('awscli') {
-      stage 'Test AWS CLI'
-      sh 'aws s3 ls'
+    stage('Get myAccount code') {
+      container('awscli') {
+        stage('Test AWS CLI') {
+          sh 'aws s3 ls'
+        }
+      }
     }
   }
 }
