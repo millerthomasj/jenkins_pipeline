@@ -7,7 +7,7 @@ podTemplate(
       image: 'fstab/aws-cli',
       ttyEnabled: true,
       workingDir: '/home/aws',
-      command: 'cat'
+      command: '/home/aws/aws/env/bin/aws'
     )
   ],
   annotations: [
@@ -19,7 +19,7 @@ podTemplate(
     stage('Get myAccount code') {
       container('awscli') {
         stage('Test AWS CLI') {
-          sh 'aws s3 ls'
+          sh 'aws --version'
         }
       }
     }
