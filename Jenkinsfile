@@ -3,12 +3,6 @@ podTemplate(
   label: 'myaccount',
   containers: [
     containerTemplate(
-      name: 'awscli',
-      image: 'fstab/aws-cli',
-      ttyEnabled: true,
-      workingDir: '/home/aws',
-    ),
-    containerTemplate(
       name: 'build-env',
       image: '422152100797.dkr.ecr.us-west-1.amazonaws.com/slave-terraform',
       ttyEnabled: true,
