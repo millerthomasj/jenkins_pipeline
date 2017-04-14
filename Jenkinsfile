@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        node('terraform') {
+        node('slave-terraform') {
           container('terraform') {
             checkout scm
             sh("hostname")
