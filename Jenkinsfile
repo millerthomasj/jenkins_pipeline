@@ -7,7 +7,7 @@ pipeline {
       }
       steps {
         checkout scm
-        sh 'which aws'
+        sh '/usr/local/bin/aws s3 ls'
       }
     }
   }
