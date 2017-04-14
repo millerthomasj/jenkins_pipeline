@@ -16,8 +16,10 @@ podTemplate(
 )
 {
   node ('myaccount') {
-    stage('Checkout code') {
-      checkout scm
+    container('jnlp') {
+      stage('Checkout code') {
+        checkout scm
+      }
     }
 
     stage('Get myAccount code') {
