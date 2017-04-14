@@ -1,4 +1,5 @@
 #!/bin/bash
+hostname
 echo "Does this stupd thing work"
 which packer
 echo "Testing aws."
