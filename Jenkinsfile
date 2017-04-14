@@ -7,7 +7,7 @@ pipeline {
       }
       steps {
         checkout scm
-        sh 'echo $PATH'
+        sh 'which aws'
       }
     }
   }
