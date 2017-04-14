@@ -6,6 +6,7 @@ podTemplate(
       name: 'awscli',
       image: 'fstab/aws-cli',
       ttyEnabled: true,
+      workingDir: '/home/aws',
       command: 'cat'
     )
   ],
