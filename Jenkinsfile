@@ -18,8 +18,7 @@ podTemplate(
     stage 'Get myAccount code'
     container('awscli') {
       stage 'Test AWS CLI'
-        sh 'aws s3 ls'
-      }
+      sh 'aws s3 ls'
     }
   }
 }
