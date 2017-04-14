@@ -18,6 +18,7 @@ podTemplate(
     container('build-env') {
       stage('Checkout code') {
         checkout scm
+        sh './build.sh'
       }
     }
   }
