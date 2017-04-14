@@ -8,7 +8,7 @@ pipeline {
       steps {
         checkout scm
         sh 'echo $PATH'
-        sh '/usr/local/bin/aws s3 ls'
+        sh '#!/bin/bash; /usr/local/bin/aws s3 ls'
       }
     }
   }
