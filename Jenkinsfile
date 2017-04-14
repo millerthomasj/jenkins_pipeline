@@ -1,6 +1,5 @@
 podTemplate(
   name: 'build-myAccount'
-  namespace: 'cicd'
   label: 'myaccount',
   containers: [
     containerTemplate(
