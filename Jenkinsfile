@@ -7,6 +7,7 @@ pipeline {
       }
       steps {
         checkout scm
+        sh 'aws s3 ls'
       }
     }
   }
