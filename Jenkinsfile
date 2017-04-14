@@ -6,7 +6,7 @@ podTemplate(
       name: 'build-env',
       image: '422152100797.dkr.ecr.us-west-1.amazonaws.com/slave-terraform',
       ttyEnabled: true,
-      workingDir: '/home/jenkins',
+      command: 'cat'
     )
   ],
   annotations: [
