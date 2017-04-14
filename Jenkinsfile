@@ -1,4 +1,4 @@
-node('terraform/slave-terraform') {
+node('slave-terraform') {
   checkout scm
   sh './build.sh'
 }
