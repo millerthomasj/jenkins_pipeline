@@ -1,6 +1,6 @@
 podTemplate(
   name: 'build-myAccount'
-  namespace: 'kubernetes'
+  namespace: 'cicd'
   label: 'myaccount',
   containers: [
     containerTemplate(
