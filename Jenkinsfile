@@ -1,5 +1,5 @@
 podTemplate(
-  name: 'build-myAccount'
+  name: 'build-myAccount',
   label: 'myaccount',
   containers: [
     containerTemplate(
