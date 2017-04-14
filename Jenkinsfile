@@ -7,6 +7,12 @@ podTemplate(
       image: '422152100797.dkr.ecr.us-west-1.amazonaws.com/slave-terraform',
       ttyEnabled: true,
       workingDir: '/home/jenkins',
+    ),
+    containerTemplate(
+      name: 'aws',
+      image: 'agilestacks/aws',
+      ttyEnabled: true,
+      command: 'cat'
     )
   ],
   annotations: [
@@ -18,6 +24,14 @@ podTemplate(
     container('build-env') {
       stage('Checkout code') {
         checkout scm
+      }
+    }
+    container('aws') {
+      stage('AWS Info') {
+        sh """
+          script: "aws s3 ls",
+          returnStdout: true
+        """
       }
     }
   }
