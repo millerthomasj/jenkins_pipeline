@@ -1,4 +1,4 @@
-node('builder-terraform') {
+node {
   stage('Build') {
       checkout scm
       sh("hostname")
