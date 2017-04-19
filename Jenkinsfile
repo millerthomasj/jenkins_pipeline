@@ -1,4 +1,4 @@
-node {
+node('build-slave') {
   stage('Build') {
       checkout scm
       sh("hostname")
